@@ -2,6 +2,12 @@
 GENERAL
 *******************************************************************/
 
+body {
+    position: relative;
+    background: url('./image/coffee_leslie.png');
+    background-size: cover;
+}
+
 /********************************
 Navigation menu
 *********************************/
