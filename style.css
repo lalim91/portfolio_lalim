@@ -1,0 +1,22 @@
+/*******************************************************************
+GENERAL
+*******************************************************************/
+
+/********************************
+Navigation menu
+*********************************/
+.navbar {
+    background-color: darkseagreen;
+}
+
+.nav {
+    float: right;
+}
+
+.navlist a:link {
+    color:white;
+}
+
+.navlist a:visited {
+    color:white;
+}
