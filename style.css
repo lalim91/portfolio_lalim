@@ -4,8 +4,6 @@ GENERAL
 
 body {
     position: relative;
-    background: url('./image/coffee_leslie.png');
-    background-size: cover;
 }
 
 /********************************
@@ -15,14 +13,28 @@ Navigation menu
     background-color: darkseagreen;
 }
 
-.nav {
-    float: right;
-}
-
 .navlist a:link {
     color:white;
 }
 
 .navlist a:visited {
     color:white;
+}
+
+/********************************
+Home
+*********************************/
+#home {
+    background: url("./image/leslie_icecream.jpg");
+    background-size:cover;
+    height:100vh;
+    width:100vw;
+}
+/********************************
+Projects
+*********************************/
+
+.project_row {
+    margin-top: 1.5vh;
+    margin-bottom:1.5vh;
 }
