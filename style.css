@@ -37,12 +37,26 @@ About Me
     height:100vh;
     width:100vw;
 }
+.aboutDiv{
+    height: 48%;
+    margin: .5%;
+}
+#aboutPic{
+    background: url("./image/leslie_icecream.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#aboutText{
+    background-color: darkseagreen;
+}
+
 /********************************
 Skills
 *********************************/
 #skill {
     height:100vh;
     width:100vw;
+    background-color: beige;
 }
 /********************************
 Projects
@@ -53,13 +67,20 @@ Projects
 }
 .project_row {
     margin: 1.5vh auto;
+    top:13vh;
+    left:12vw;
+}
+.row {
+    margin-top: 5%;
 }
 /********************************
 Contact Me
 *********************************/
-#contact {
+#connect {
     height:100vh;
     width:100vw;
     background-color: beige;
-    top:15vh;
+}
+#contactForm {
+    top:25vh;
 }
