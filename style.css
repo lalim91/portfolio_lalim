@@ -37,9 +37,13 @@ About Me
     height:100vh;
     width:100vw;
 }
+
 .aboutDiv{
-    height: 48%;
+    height: 43%;
     margin: .5%;
+    position: relative;
+    left: 7%;
+    top: 17%;
 }
 #aboutPic{
     background: url("./image/leslie_icecream.jpg");
@@ -83,4 +87,11 @@ Contact Me
 }
 #contactForm {
     top:25vh;
+}
+textarea {
+    margin-bottom:2%;
+}
+.btn {
+    left: 24vw;
+    position: relative;
 }
