@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap JavaScript -->
@@ -99,18 +99,23 @@
 
 <!--===================Connect=====================-->
     <div id="connect" class="container">
-        <div class="col-sm-6">
+        <div class="contactInfo col-sm-5">
+            <p><span id="emailBeg">example</span>@<span id="emailEnd">yahoo.com</span></p>
+            <p><span id="phoneArea">XXX</span>. <span id="phoneThree">XXX</span>. <span id="phoneFour">XXXX</span></p>
+            <hr>
+            <div><span class="logo"><img src="./image/GitHub-Mark-64px.png"></span><span class="logo"><img src="./image/Logo-Black-54px-R.png"></span>
+                <span class="logo"><img src="./image/resume-logo-webtreatsetc.png"></span></div>
 
 
-        </div>
-        <form role=form id="contactForm" class="col-sm-6">
-            <div class="form-group col-xs-4">
-                <input type="text" class="form-control" pattern='^[A-Z][a-z]+ [A-Z][a-z]+' placeholder="First and Last Name" required>
             </div>
-            <div class="form-group col-xs-4">
+            <form role=form id="contactForm" class="col-sm-7">
+                <div class="form-group col-xs-5">
+                    <input type="text" class="form-control" pattern='^[A-Z][a-z]+ [A-Z][a-z]+' placeholder="First and Last Name" required>
+                </div>
+                <div class="form-group col-xs-5">
                 <input type="email" class="form-control" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' placeholder="Email" required>
-            </div>
-            <div class="form-group col-xs-8">
+                </div>
+                <div class="form-group col-xs-10">
                 <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
                 <button class='btn btn-default' type="submit">Submit</button>
             </div>

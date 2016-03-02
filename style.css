@@ -61,7 +61,13 @@ Skills
     height:100vh;
     width:100vw;
     background-color: beige;
+    background-image: url("./image/brown-bare-tree-clipart-6niX8r8cB.png");
+    background-repeat: no-repeat;
+    background-position-y: 5vh;
+
+
 }
+
 /********************************
 Projects
 *********************************/
@@ -85,6 +91,21 @@ Contact Me
     width:100vw;
     background-color: beige;
 }
+.contactInfo {
+    color: navy;
+    position: relative;
+    left: 5vw;
+    top: 25vh;
+    font-size: 3vh;
+    text-align: center;
+}
+hr {
+    width:12vw;
+    border-top: 1px solid #13152F;
+}
+.logo {
+    margin-right:2%;
+}
 #contactForm {
     top:25vh;
 }
@@ -92,6 +113,6 @@ textarea {
     margin-bottom:2%;
 }
 .btn {
-    left: 24vw;
+    left: 39vw;
     position: relative;
 }
