@@ -61,10 +61,23 @@ Skills
     height:100vh;
     width:100vw;
     background-color: beige;
-    background-image: url("./image/brown-bare-tree-clipart-6niX8r8cB.png");
+    background-image: url("./image/tree.png ");
     background-repeat: no-repeat;
-    background-position-y: 5vh;
+    background-position:center;
 
+}
+#htmlskill {
+    width: 10vh;
+    height: 10vh;
+    line-height:10vh;
+    background-color: darkseagreen;
+    color: white;
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 17vw;
+    top: 23vh;
 
 }
 
