@@ -2,34 +2,28 @@
  * Created by Lalim on 2/12/16.
  */
 
-var input = function dynamic(text){
+var skillGenerator = function(text){
+    var self =this;
     this.text = text;
-    this.skill = $('<div>').text(this.text).addClass('htmlskill');
-    this.placeskill= function(){
-        $('#container').append(this.skill);
+    this.skill = $('<div>').text(this.text).addClass('htmlskill').click(function(){self.animateSkills()});
+    this.appendSkills= function(){
+        $('#skill').append(this.skill);
     };
-    this.animateskill = function(){
+    this.animateSkills = function(){
         $(this.skill).animate({
-            right:'10px',
-            top:'20px'
+            right:'250px',
+            height:'150px',
+            width: '150px'
         });
     };
 };
-
-var x= new input('CSS');//.placeskill();
-var y = new input('JavaScript');//.placeskill();
-x.placeskill();
-y.placeskill();
-//x.animateskill();
-//y.animateskill();
-
+var x= new skillGenerator('CSS');//.placeskill();
+var y = new skillGenerator('JavaScript');//.placeskill();
 
 
 $(document).ready(function(){
-    $('.htmlskill').on('click',function(){
-        console.log('click is working!');
-        $(this).animateskill();
-    });
+    x.appendSkills();
+    y.appendSkills();
 });
 
 
