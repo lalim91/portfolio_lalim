@@ -17,8 +17,8 @@ var skillGenerator = function(text){
         });
     };
 };
-var x= new skillGenerator('CSS');//.placeskill();
-var y = new skillGenerator('JavaScript');//.placeskill();
+var x= new skillGenerator('CSS');
+var y = new skillGenerator('JavaScript');
 
 
 $(document).ready(function(){
@@ -27,6 +27,9 @@ $(document).ready(function(){
 });
 
 
+var personInfoGenerator = function(){
 
+
+};
 
 
