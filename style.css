@@ -25,39 +25,32 @@ Navigation menu
 Home
 *********************************/
 #home {
+    background: url("./image/leslielim_02_v2.jpg");
+    background-size:cover;
+    height:100vh;
+    width:100vw;
+}
+
+/********************************
+About Me
+*********************************/
+#about {
     background: url("./image/leslie_main.jpg");
     background-size:cover;
     height:100vh;
     width:100vw;
 }
-/********************************
-About Me
-*********************************/
-#about {
-    height:100vh;
-    width:100vw;
+.aboutDiv {
+    height: 78%;
+    position: relative;
+    background-color: darkseagreen;
+    top: 13%;
+    border-radius:25%;
+    opacity: .7;
+    text-align:center;
+    color:white;
+
 }
-.green {
-    background-color:darkseagreen;
-}
-.beige {
-    background-color:beige;
-}
-/*.aboutDiv{*/
-    /*height: 43%;*/
-    /*margin: .5%;*/
-    /*position: relative;*/
-    /*left: 7%;*/
-    /*top: 17%;*/
-/*}*/
-/*#aboutPic{*/
-    /*background: url("./image/leslie_icecream.jpg");*/
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-/*}*/
-/*#aboutText{*/
-    /*background-color: darkseagreen;*/
-/*}*/
 
 /********************************
 Skills
@@ -101,6 +94,11 @@ Projects
 .row {
     margin-top: 5%;
 }
+.img-responsive {
+    border:2px solid black;
+
+}
+
 /********************************
 Contact Me
 *********************************/
