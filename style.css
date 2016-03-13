@@ -41,7 +41,7 @@ About Me
     width:100vw;
 }
 .aboutDiv {
-    height: 78%;
+    height: 45%;
     position: relative;
     background-color: darkseagreen;
     top: 13%;
@@ -64,7 +64,7 @@ Skills
     background-position:center;
 
 }
-.htmlskill {
+.skills {
     width: 10vh;
     height: 10vh;
     line-height:10vh;
@@ -74,10 +74,9 @@ Skills
     text-align: center;
     position: relative;
     display: inline-block;
-    left: 17vw;
-    top: 23vh;
 
 }
+
 
 /********************************
 Projects
@@ -87,16 +86,71 @@ Projects
     width:100vw;
 }
 .project_row {
-    margin: 1.5vh auto;
-    top:13vh;
-    left:12vw;
+    margin:auto;
+    top:20vh;
 }
 .row {
-    margin-top: 5%;
+    margin-top: 1%;
 }
-.img-responsive {
-    border:2px solid black;
+.caption {
+    position: relative;
+    overflow: hidden;
 
+    /* Only the -webkit- prefix is required these days */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+.caption:hover::before {
+    background: rgba(0, 0, 0, .5);
+}
+
+.caption__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.caption__overlay__title {
+    -webkit-transform: translateY( -webkit-calc(-100% - 90%) );
+    transform: translateY( calc(-100% - 90%) );
+    background-color: gray;
+    opacity: .8;
+    font-size:4vh;
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay__title {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: transparent;
 }
 
 /********************************
@@ -111,7 +165,7 @@ Contact Me
     color: navy;
     position: relative;
     left: 5vw;
-    top: 25vh;
+    top: 35vh;
     font-size: 3vh;
     text-align: center;
 }
@@ -123,7 +177,7 @@ hr {
     margin-right:2%;
 }
 #contactForm {
-    top:25vh;
+    top:35vh;
 }
 textarea {
     margin-bottom:2%;
