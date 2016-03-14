@@ -68,7 +68,7 @@ Skills
     width: 10vh;
     height: 10vh;
     line-height:10vh;
-    background-color: darkseagreen;
+    background-color: tomato;
     color: white;
     border-radius: 100%;
     text-align: center;
@@ -76,8 +76,50 @@ Skills
     display: inline-block;
 
 }
+.html{
+    top:22vh;
+    right:-44vw;
+    -webkit-transition: all 0.9s ease-out;
+    -moz-transition: all 0.9s ease-out;
+    -ms-transition: all 0.9s ease-out;
+    -o-transition: all 0.9s ease-out;
+    transition: all 0.3s ease-out;
+}
+.html:hover{
+    width:10%;
+    height:10%;
+    border-radius:25%;
+    right:1vw;
+}
+.css{
+    top:35vh;
+    left:49vw;
+}
+.boot{
+    top: 17vh;
+    left: 44vw;
 
-
+}
+.js{
+    top:56vh;
+    left:25vw;
+}
+.jq{
+    top:44vh;
+    left:24vw;
+}
+.angular{
+    top:56vh;
+    left:26vw;
+}
+.git{
+    top: 35vh;
+    left: 8vw;
+}
+.gh{
+    top: 46vh;
+    left: 21vw;
+}
 /********************************
 Projects
 *********************************/
