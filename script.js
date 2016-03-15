@@ -44,11 +44,11 @@ var skillGenerator = function(text, class_attr, side, desVar){ //this is the ind
     };
     this.description = function(){
         if(this.skill_element.hasClass('left_side')){
-            $('.right').html('');
-            $('.left').html('').append(self.desVar);
+            $('.right').css('visibility','hidden').html('');
+            $('.left').css('visibility','visible').html('').append(self.desVar);
         }else if(this.skill_element.hasClass('right_side')){
-            $('.left').html('');
-            $('.right').html('').append(self.desVar);
+            $('.left').css('visibility','hidden').html('');
+            $('.right').css('visibility','visible').html('').append(self.desVar);
         }
     }
 };
@@ -107,8 +107,11 @@ var phone = new personInfoGenerator();
 var sm;
 
 $(document).ready(function(){
+    $('.left').css('visibility','hidden');
+    $('.right').css('visibility','hidden');
     sm = new skillManager('.mid');
     sm.create_skill('HTML','html','left_side',html_des);
+    //sm.create_skill(skill_data['html']);
     sm.create_skill('CSS3','css','left_side', css_des);
     sm.create_skill('Bootstrap','boot','right_side',boot_des);
     sm.create_skill('JavaScript','js','right_side', js_des);
