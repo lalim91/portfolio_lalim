@@ -6,6 +6,8 @@ body {
     position: relative;
 }
 
+
+
 /********************************
 Navigation menu
 *********************************/
@@ -29,6 +31,7 @@ Home
     background-size:cover;
     height:100vh;
     width:100vw;
+    position:relative;
 }
 
 /********************************
@@ -39,6 +42,7 @@ About Me
     background-size:cover;
     height:100vh;
     width:100vw;
+    position:relative;
 }
 .aboutDiv {
     height: 45%;
@@ -63,6 +67,7 @@ Skills
     background-repeat: no-repeat;
     background-position:center;
 
+
 }
 .skills {
     width: 10vh;
@@ -76,49 +81,72 @@ Skills
     display: inline-block;
 
 }
+.desc{
+    border:2px solid navy;
+    border-radius: 25%;
+    height:50vh;
+    position:relative;
+    top:20vh;
+}
+.mid{
+    height:66vh;
+    position:relative;
+    top:20vh;
+
+}
+.left_side{}
+.right_side{}
+.side_text{
+    text-align: center;
+    color: navy;
+    top: 15vh;
+    font-size: 3vh;
+    position: relative;
+}
 .html{
-    top:22vh;
-    right:-44vw;
+    top:29vh;
     -webkit-transition: all 0.9s ease-out;
     -moz-transition: all 0.9s ease-out;
     -ms-transition: all 0.9s ease-out;
     -o-transition: all 0.9s ease-out;
     transition: all 0.3s ease-out;
 }
-.html:hover{
-    width:10%;
-    height:10%;
-    border-radius:25%;
-    right:1vw;
-}
 .css{
-    top:35vh;
-    left:49vw;
+    top:0;
 }
 .boot{
-    top: 17vh;
-    left: 44vw;
+    top: 26vh;
+    left: 7vw;
 
 }
 .js{
-    top:56vh;
-    left:25vw;
+    top: 1vh;
+    left: 1vw;
 }
 .jq{
-    top:44vh;
-    left:24vw;
+    top:36vh;
+    right:2vw;
 }
 .angular{
-    top:56vh;
-    left:26vw;
-}
-.git{
-    top: 35vh;
+    top: 9vh;
     left: 8vw;
 }
+.git{
+    top: 27vh;
+    left: 3vw;
+}
 .gh{
-    top: 46vh;
-    left: 21vw;
+    top: 5vh;
+    left: 5vw;
+}
+.drop{
+    animation-timing-function:cubic-bezier(.3333, 0,.6667,.3333);
+    animation-name:drop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes drop {
+    to {top:90%;}
 }
 /********************************
 Projects
@@ -176,14 +204,15 @@ Projects
 .caption:hover .caption__overlay {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    z-index:2;
 }
 
 .caption__overlay__title {
-    -webkit-transform: translateY( -webkit-calc(-100% - 90%) );
-    transform: translateY( calc(-100% - 90%) );
+    -webkit-transform: translateY( -webkit-calc(-100% - 116%) );
+    transform: translateY( calc(-100% - 116%) );
     background-color: gray;
     opacity: .8;
-    font-size:4vh;
+    font-size:3.5vh;
 
     transition: -webkit-transform .35s ease-out;
     transition:         transform .35s ease-out;
@@ -227,4 +256,11 @@ textarea {
 .btn {
     left: 39vw;
     position: relative;
+}
+.attribution{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: .7;
+    margin-right: 5px;
 }
