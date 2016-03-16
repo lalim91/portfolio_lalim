@@ -59,7 +59,7 @@ var html_des = $('<div>',{
     class:'side_text'
 });
 var css_des = $('<div>',{
-    text:"I saw the power of CSS animations in VineTunes, while creating the cube.",
+    text:".leslie{height:78px}",
     class:'side_text'
 });
 var boot_des = $('<div>',{
@@ -107,6 +107,7 @@ var phone = new personInfoGenerator();
 var sm;
 
 $(document).ready(function(){
+
     $('.left').css('visibility','hidden');
     $('.right').css('visibility','hidden');
     sm = new skillManager('.mid');
