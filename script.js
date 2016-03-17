@@ -59,7 +59,7 @@ var html_des = $('<div>',{
     class:'side_text'
 });
 var css_des = $('<div>',{
-    text:".leslie{height:78px}",
+    text:"#leslie{height:78px}",
     class:'side_text'
 });
 var boot_des = $('<div>',{
