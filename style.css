@@ -7,7 +7,6 @@ body {
 }
 
 
-
 /********************************
 Navigation menu
 *********************************/
@@ -33,6 +32,14 @@ Home
     width:100vw;
     position:relative;
 }
+.attribution{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    opacity: .7;
+    margin-right: 5px;
+}
+
 
 /********************************
 About Me
@@ -80,14 +87,8 @@ Skills
     font-size:2vh;
 
 }
-.desc{
-    border:2px solid navy;
-    border-radius: 25%;
-    height:50vh;
-    position:relative;
-    top:20vh;
-}
-.mid{
+
+.tree{
     height:66vh;
     position:relative;
     top:20vh;
@@ -98,23 +99,11 @@ Skills
     background-size: contain;
 
 }
-.left_side{}
-.right_side{}
-.side_text{
-    text-align: center;
-    color: navy;
-    top: 15vh;
-    font-size: 3vh;
-    position: relative;
-}
+
 .html{
     top: 36vh;
     left: 9vw;
-    -webkit-transition: all 0.9s ease-out;
-    -moz-transition: all 0.9s ease-out;
-    -ms-transition: all 0.9s ease-out;
-    -o-transition: all 0.9s ease-out;
-    transition: all 0.3s ease-out;
+
 }
 .css{
     top: 6vh;
@@ -264,11 +253,4 @@ textarea {
 .btn {
     left: 39vw;
     position: relative;
-}
-.attribution{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    opacity: .7;
-    margin-right: 5px;
 }
