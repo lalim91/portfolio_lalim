@@ -60,7 +60,9 @@ About Me
     opacity: .7;
     text-align:center;
     color:white;
-
+}
+.aboutDiv #aboutDes {
+    font-size:3vh;
 }
 
 /********************************
@@ -70,6 +72,16 @@ Skills
     height:100vh;
     width:100vw;
     background-color: beige;
+}
+.sign{
+    height: 42vh;
+    position: relative;
+    top: 49vh;
+    background-color: beige;
+    background-image: url("./image/sign.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
 }
 .skills {
     width: 10vh;

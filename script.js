@@ -21,11 +21,11 @@ var skillManager = function (tree,cherry) {//this is the skill manager
         dev.push(new_skill);
     };
 
-    this.render_dev = function(text,class_name){
+    this.render_dev = function(){
         for (var i in dev) {
             var element = dev[i].renderSelf().addClass('devs');
             this.cherryElement.append(element);
-            $('#treebtn').on('click',function () {
+            $('.sign').on('click',function () {
                 console.log('I was clicked');
                 $('.devs').show().addClass('devSkills');
             })
@@ -36,7 +36,7 @@ var skillManager = function (tree,cherry) {//this is the skill manager
         for (var i in skills) {
             var element = skills[i].renderSelf().addClass('lang');
             this.treeElement.append(element);
-            $('#treebtn').on('click',function () {
+            $('.sign').on('click',function () {
                 console.log('I was clicked');
                 $('.lang').show().addClass('skills');
             })
