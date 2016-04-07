@@ -181,7 +181,7 @@ Skills
     position:relative;
     top:20vh;
     background-color: beige;
-    background-image: url("./image/tree.png");
+    background-image: url("./image/treeFront.png");
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -192,7 +192,7 @@ Skills
     position:relative;
     top:20vh;
     background-color: beige;
-    background-image: url("./image/pinktree.png");
+    background-image: url("./image/pinktreeDev.png");
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
