@@ -9,15 +9,15 @@ var skillManager = function (tree,cherry) {//this is the skill manager
     var dev = [];
     var skill_text = "";
 
-    this.create_skill = function (text, class_name) {
+    this.create_skill = function (text, class_name, desc) {
         skill_text = text;
-        var new_skill = new skillGenerator(text, class_name);
+        var new_skill = new skillGenerator(text, class_name, desc);
         skills.push(new_skill);
 
     };
-    this.create_dev = function (text, class_name) {
+    this.create_dev = function (text, class_name, desc) {
         skill_text = text;
-        var new_skill = new skillGenerator(text, class_name);
+        var new_skill = new skillGenerator(text, class_name, desc);
         dev.push(new_skill);
     };
 
@@ -47,10 +47,11 @@ var skillManager = function (tree,cherry) {//this is the skill manager
         console.log(skills);
     };
 };
-var skillGenerator = function (text, class_attr) { //this is the individual skill
+var skillGenerator = function (text, class_attr,desc) { //this is the individual skill
     var self_sg = this;
     self_sg.skill_element = null;
     self_sg.text = text;
+    self_sg.desc = desc;
     self_sg.class_attr = class_attr;
     this.renderSelf = function () {
         self_sg.skill_element = $('<div>').text(self_sg.text).addClass(self_sg.class_attr).css('display', 'none');
@@ -61,21 +62,62 @@ var skillGenerator = function (text, class_attr) { //this is the individual skil
             }else if ( self_sg.skill_element.hasClass('devs')){
                 self_sg.addFloat();
             }
+            self_sg.description();
         });
+
         return self_sg.skill_element;
     };
     this.addDrop = function () {
         console.log('I was clicked on element', this.skill_element);
+        $('.float').removeClass('float');
         $('.drop').removeClass('drop');
         self_sg.skill_element.addClass('drop');
     };
     this.addFloat = function (){
         console.log('I was clicked on element', this.skill_element);
+        $('.drop').removeClass('drop');
         $('.float').removeClass('float');
         self_sg.skill_element.addClass('float');
+    };
+    this.description = function(){
+        $('.signDiv').html('').append(self_sg.desc);
+
     }
 
 };
+
+var html_des = $('<div>',{
+    text:"Html5 was the first language I learn... and there was no going back!",
+    class:'signText'
+});
+var css_des = $('<div>',{
+    text:"I saw the power of CSS animations in VineTunes, while creating the cube.",
+    class:'signText'
+});
+var boot_des = $('<div>',{
+    text:"I created the Student Grade Table completely in bootstrap, and most of mBoutique.",
+    class:'signText'
+});
+var js_des = $('<div>',{
+    text:"Learning JavaScript rewired my brain to think differently",
+    class:'signText'
+});
+var jq_des = $('<div>',{
+    text:"I am more comfortable using  jQuery. Avatar Training was my first project using dynamically created elements. ",
+    class:'signText'
+});
+var angular_des = $('<div>',{
+    text:"I used angular in the Student Grade Table, LFZ Quiz, and use it in Mboutique to switch languages.",
+    class:'signText'
+});
+var git_des = $('<div>',{
+    text:"I am familiar with Git commands. ",
+    class:'signText'
+});
+var gh_des = $('<div>',{
+    text:"I am familiar with Github and have collaborated with others on The Student Grade Table, Swash Buck Toe, VineTunes, and LFZ Quiz",
+    class:'signText'
+});
 
 var personInfoGenerator = function () {
     this.getAddress = function (name, site) {
@@ -96,20 +138,20 @@ var sm;
 
 $(document).ready(function () {
     sm = new skillManager('.tree','.cherry');
-    sm.create_skill('HTML', 'html');
-    sm.create_skill('CSS3', 'css');
-    sm.create_skill('Bootstrap', 'boot');
-    sm.create_skill('JavaScript', 'js');
-    sm.create_skill('jQuery', 'jq');
-    sm.create_skill('Angular', 'angular');
+    sm.create_skill('HTML', 'html',html_des);
+    sm.create_skill('CSS3', 'css', css_des);
+    sm.create_skill('Bootstrap', 'boot', boot_des);
+    sm.create_skill('JavaScript', 'js',js_des);
+    sm.create_skill('jQuery', 'jq',jq_des);
+    sm.create_skill('Angular', 'angular', angular_des);
     sm.create_skill('Firebase','fb');
     sm.create_skill('AJAX','aj');
     sm.create_dev('Chrome','dt');
     sm.create_dev('Sublime','sub');
     sm.create_dev('PHPStorm','php');
     sm.create_dev('MAMP','mp');
-    sm.create_dev('Git', 'git');
-    sm.create_dev('Github', 'gh');
+    sm.create_dev('Git', 'git',git_des);
+    sm.create_dev('Github', 'gh', gh_des);
     sm.render_skills();
     sm.render_dev();
 
