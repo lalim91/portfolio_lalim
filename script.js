@@ -173,7 +173,7 @@ var chrome_des = $('<div>',{
     class:'skillInfo'
 });
 var mp_des = $('<div>',{
-    text:"I love quickly accessing my projects with MAMP",
+    text:"I love quickly accessing my projects with MAMP ",
     class:'skillInfo'
 });
 var php_des = $('<div>',{
