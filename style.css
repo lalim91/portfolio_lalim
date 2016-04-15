@@ -83,7 +83,17 @@ Skills
     background-position:center;
     background-size: contain;
 }
-.signDiv{
+#signContainer{
+    height: 61%;
+    width: 81%;
+    position: absolute;
+    left: 11%;
+    top: 6%;
+    text-align: center;
+    color: yellow;
+    text-shadow:1px 1px black;
+}
+#signDiv{
     height: 61%;
     width: 81%;
     position: absolute;
@@ -93,7 +103,16 @@ Skills
     color: yellow;
     text-shadow:1px 1px black;
     cursor:pointer;
-
+}
+.skillInfo{
+    height: 61%;
+    width: 81%;
+    position: absolute;
+    left: 11%;
+    top: 10%;
+    text-align: center;
+    color: yellow;
+    text-shadow:1px 1px black;
 }
 .signText{
     top:2vh;
@@ -402,7 +421,7 @@ Projects
 .caption__overlay__title {
     -webkit-transform: translateY( -webkit-calc(-100% - 116%) );
     transform: translateY( calc(-100% - 116%) );
-    background-color: gray;
+    background-color: darkseagreen;
     opacity: .8;
     font-size:3.5vh;
 
