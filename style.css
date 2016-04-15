@@ -366,20 +366,77 @@ Projects
     height:100vh;
     width:100vw;
 }
+.projectCol{
+    height: 78%;
+    border: 1px solid black;
+    position: relative;
+    top: 13%;
+    padding:0;
+}
+.mboutique{
+    background-image: url("./image/mboutique.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.memmatch{
+    background-image: url("./image/memmatch.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.tic{
+    background-image: url("./image/tictac.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.baymath{
+    background-image: url("./image/baymax.png");
+    background-repeat: no-repeat;
+    background-position:43%;
+    background-size: cover;
+}
+.sgt{
+    background-image: url("./image/sgt.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.vine{
+    background-image: url("./image/vinetune.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.quiz{
+    background-image: url("./image/quiz.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.personal{
+    background-image: url("./image/placeholder.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
 .project_row {
     margin:auto;
     top:20vh;
 }
+
 .row {
     margin-top: 1%;
 }
 .caption {
-    position: relative;
+    /*position: absolute;*/
     overflow: hidden;
-
-    /* Only the -webkit- prefix is required these days */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    height: 50%;
+    border: 1px solid blue;
 }
 
 .caption::before {
@@ -424,6 +481,7 @@ Projects
     background-color: darkseagreen;
     opacity: .8;
     font-size:3.5vh;
+    width:40vh;
 
     transition: -webkit-transform .35s ease-out;
     transition:         transform .35s ease-out;
