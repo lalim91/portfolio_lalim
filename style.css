@@ -368,7 +368,7 @@ Projects
 }
 .projectCol{
     height: 75%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     position: relative;
     top: 13%;
     padding:0;
@@ -447,9 +447,9 @@ Projects
 .box_collapse{
     transform: scale(0,0);
 }
-.box_expand{
-    transform:scale(2,2);
-}
+/*.box_expand{*/
+    /*transform:scale(2,2);*/
+/*}*/
 
 .project_row {
     margin:auto;
@@ -464,6 +464,7 @@ Projects
     overflow: hidden;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    transform:scale(2,2);
 
 }
 .box{
@@ -492,7 +493,7 @@ Projects
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 10px;
+    /*padding: 10px;*/
     color: white;
 
     -webkit-transform: translateY(100%);
@@ -514,7 +515,7 @@ Projects
     background-color: darkseagreen;
     opacity: .8;
     font-size:3.5vh;
-    width:40vh;
+    width:inherit;
 
     transition: -webkit-transform .35s ease-out;
     transition:         transform .35s ease-out;

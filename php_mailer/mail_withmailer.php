@@ -1,8 +1,8 @@
 <?php
-require_once('emailconfig.php');
+require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->SMTPDebug = 0;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -21,11 +21,11 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = 'daniel.paschal@learningfuze.com';
-$mail->FromName = 'Daniel Paschal';
-$mail->addAddress('daniel.paschal@learningfuze.com', 'Daniel');     // Add a recipient
+$mail->From = $_POST['email'];
+$mail->FromName = $_POST['name'];
+$mail->addAddress('leslieannlim@gmail.com', 'Leslie Lim');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo('daniel.paschal@learningfuze.com', 'Dan');
+$mail->addReplyTo($_POST['email'], $_POST['name']);
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
@@ -33,14 +33,15 @@ $mail->addReplyTo('daniel.paschal@learningfuze.com', 'Dan');
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Subject = 'message from '.$_SERVER['REMOTE_ADDR'];
+$mail->Body    = $_POST['message'];
+$mail->AltBody = htmlentities($_POST['message']);
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
+    //header('location: ../index.html');
     echo 'Message has been sent';
 }
 ?>

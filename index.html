@@ -79,38 +79,38 @@
         <div class="col-xs-offset-1 col-xs-10 col-sm-5 projectCol">
 
             <div class="mboutique one box">
-                <!--<div class="caption__overlay">-->
-                    <!--<h1 class="caption__overlay__title">Mboutique</h1>-->
-                    <!--<p class="caption__overlay__content">-->
-                    <!--Mboutique is a redesigned website to sell Macarons.-->
-                    <!--</p>-->
-                <!--</div>-->
+                <div class="caption__overlay">
+                    <h1 class="caption__overlay__title">Mboutique</h1>
+                    <p class="caption__overlay__content">
+                    Mboutique is a redesigned website to sell Macarons.
+                    </p>
+                </div>
             </div>
             <div class="memmatch two box">
-                <!--<div class="caption__overlay">-->
-                    <!--<h1 class="caption__overlay__title">Avatar Training</h1>-->
-                    <!--<p class="caption__overlay__content">-->
-                    <!--Avatar Training is a memory match game designed to prepare Ang to fight the Fire Lord.-->
-                    <!--</p>-->
-                <!--</div>-->
+                <div class="caption__overlay">
+                    <h1 class="caption__overlay__title">Avatar Training</h1>
+                    <p class="caption__overlay__content">
+                    Avatar Training is a memory match game designed to prepare Ang to fight the Fire Lord.
+                    </p>
+                </div>
             </div>
 
             <div class="tic three box">
-                <!--<div class="caption__overlay">-->
-                    <!--<h1 class="caption__overlay__title">Swash Buck Toe</h1>-->
-                    <!--<p class="caption__overlay__content">-->
-                    <!--Swash Buck Toe is the tic-tac-toe game pirates play on the high seas. Arrgh!-->
-                    <!--</p>-->
-                <!--</div>-->
+                <div class="caption__overlay">
+                    <h1 class="caption__overlay__title">Swash Buck Toe</h1>
+                    <p class="caption__overlay__content">
+                    Swash Buck Toe is the tic-tac-toe game pirates play on the high seas. Arrgh!
+                    </p>
+                </div>
             </div>
 
             <div class="baymath four box">
-                <!--<div class="caption__overlay">-->
-                    <!--<h1 class="caption__overlay__title">BayMath</h1>-->
-                    <!--<p class="caption__overlay__content">-->
-                    <!--Hello, I am BayMath, your personal calculator companion.-->
-                    <!--</p>-->
-                <!--</div>-->
+                <div class="caption__overlay">
+                    <h1 class="caption__overlay__title">BayMath</h1>
+                    <p class="caption__overlay__content">
+                    Hello, I am BayMath, your personal calculator companion.
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -167,16 +167,16 @@
 
 
             </div>
-            <form role=form id="contactForm" class="col-sm-7">
+            <form role=form id="contactForm" class="col-sm-7" action="php_mailer/mail_withmailer.php" method="post">
                 <div class="form-group col-xs-5">
-                    <input type="text" class="form-control" pattern='^[A-Z][a-z]+ [A-Z][a-z]+' placeholder="First and Last Name" required>
+                    <input name="name" type="text" class="form-control" pattern='^[A-Z][a-z]+ [A-Z][a-z]+' placeholder="First and Last Name" required>
                 </div>
                 <div class="form-group col-xs-5">
-                <input type="email" class="form-control" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' placeholder="Email" required>
+                <input name="email" type="email" class="form-control" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' placeholder="Email" required>
                 </div>
                 <div class="form-group col-xs-10">
-                <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
-                <button class='submit btn btn-default' type="submit">Submit</button>
+                <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                <button class='submit btn btn-default' type="button">Submit</button>
             </div>
         </form>
     </div>
