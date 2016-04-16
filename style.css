@@ -367,7 +367,7 @@ Projects
     width:100vw;
 }
 .projectCol{
-    height: 78%;
+    height: 75%;
     border: 1px solid black;
     position: relative;
     top: 13%;
@@ -390,6 +390,7 @@ Projects
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
+
 }
 .baymath{
     background-image: url("./image/baymax.png");
@@ -421,6 +422,34 @@ Projects
     background-position:center;
     background-size: cover;
 }
+.one{/* top_left */
+    transition-duration: 2s;
+    transform: scale(1,1);
+    transform-origin: 0% 0%;
+}
+.two{/* top_right */
+    transition-duration: 2s;
+    transform: scale(1,1);
+    transform-origin: 100% 0%;
+}
+
+.three{/* bottom_left */
+    transition-duration: 2s;
+    transform: scale(1,1);
+    transform-origin: 0% 100%;
+}
+.four{/* bottom_right */
+    transition-duration: 2s;
+    transform: scale(1,1);
+    transform-origin: 100% 100%;
+}
+
+.box_collapse{
+    transform: scale(0,0);
+}
+.box_expand{
+    transform:scale(2,2);
+}
 
 .project_row {
     margin:auto;
@@ -435,10 +464,14 @@ Projects
     overflow: hidden;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    height: 50%;
-    border: 1px solid blue;
-}
 
+}
+.box{
+    height: 50%;
+    width:50%;
+    float:left;
+    /*border: 1px solid blue;*/
+}
 .caption::before {
     content: ' ';
     position: absolute;

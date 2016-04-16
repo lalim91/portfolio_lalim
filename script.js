@@ -192,10 +192,32 @@ var personInfoGenerator = function () {
     }
 
 };
+var projectBox = function () {
+    this.hoverDiv = function(){
+        $(".box").hover(function(){
+            console.log("hover");
+            $(this).addClass('box_expand');
+            $(this).siblings().addClass('box_collapse');
+        }, function(){
+            console.log("unhover");
+            $(this).removeClass('box_expand');
+            $(this).siblings().removeClass('box_collapse');
+        });
+        $(".box").on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+            function(e) {
+                if($(this).hasClass('box_expand')){
+                    $(this).addClass('showContents');
+                }
+                // code to execute after transition ends
+                console.log('animation done');
+        });
+    }
+};
 
 var email = new personInfoGenerator();
 var phone = new personInfoGenerator();
 var sm;
+var project;
 
 $(document).ready(function () {
     sm = new skillManager('.tree','.cherry');
@@ -219,4 +241,8 @@ $(document).ready(function () {
 
     email.getAddress('leslieannlim', 'gmail.com');
     phone.getPhone('714', '321', '0309');
+
+    project = new projectBox();
+    project.hoverDiv();
+
 });
