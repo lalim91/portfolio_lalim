@@ -222,10 +222,11 @@ var ContactGenerator = function () {
             data:mailform.serialize(),
             cached:false,
             success:function(data){
+                var check = $('#check');
                 if(data=='Message has been sent'){
-                    //var successDiv = $('<d')
+                    check.addClass('alert alert-success').text('Message sent!').css('text-align','center');
                 }else {
-                    //error occurred
+                    check.addClass('alert alert-danger').text('Error! Please try again.').css('text-align','center');
                 }
                 console.log('message sent!')
             }
