@@ -180,7 +180,31 @@ var php_des = $('<div>',{
     text:"PhpStorm is my preferred text editor, due to its organization and usability. ",
     class:'skillInfo'
 });
-var personInfoGenerator = function () {
+
+var projectBox = function () {
+    this.hoverDiv = function(){
+        $(".box").hover(function(){
+            console.log("hover");
+            $(this).addClass('caption');
+            $(this).siblings().addClass('box_collapse');
+        }, function(){
+            console.log("unhover");
+            $(this).removeClass('caption');
+            $(this).siblings().removeClass('box_collapse');
+        });
+        //$(".box").on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+        //    function(e) {
+        //        if($(this).hasClass('box_expand')){
+        //            $(this).addClass('caption');
+        //        }
+        //        // code to execute after transition ends
+        //        console.log('animation done');
+        //});
+    }
+};
+
+var ContactGenerator = function () {
+    var c_self = this;
     this.getAddress = function (name, site) {
         $('#emailBeg').text(name);
         $('#emailEnd').text(site);
@@ -189,13 +213,38 @@ var personInfoGenerator = function () {
         $('#phoneArea').text(first);
         $('#phoneThree').text(second);
         $('#phoneFour').text(third);
+    };
+    this.submitAjax = function (){
+        var mailform = $('#contactForm');
+        $.ajax({
+            type:mailform.attr('method'),
+            url:mailform.attr('action'),
+            data:mailform.serialize(),
+            cached:false,
+            success:function(data){
+                var check = $('#check');
+                if(data=='Message has been sent'){
+                    check.addClass('alert alert-success').text('Message sent!').css('text-align','center');
+                }else {
+                    check.addClass('alert alert-danger').text('Error! Please try again.').css('text-align','center');
+                }
+                console.log('message sent!')
+            }
+        });
+    };
+    this.submitClickHandler = function (){
+        $('.submit').on('click', function(){
+            c_self.submitAjax();
+        })
     }
+
 
 };
 
-var email = new personInfoGenerator();
-var phone = new personInfoGenerator();
+
+var contact = new ContactGenerator();
 var sm;
+var project;
 
 $(document).ready(function () {
     sm = new skillManager('.tree','.cherry');
@@ -217,6 +266,11 @@ $(document).ready(function () {
     sm.render_dev();
     sm.welcomeSign();
 
-    email.getAddress('leslieannlim', 'gmail.com');
-    phone.getPhone('714', '321', '0309');
+    contact.getAddress('leslieannlim', 'gmail.com');
+    contact.getPhone('714', '321', '0309');
+    contact.submitClickHandler();
+
+    project = new projectBox();
+    project.hoverDiv();
+
 });
