@@ -100,18 +100,19 @@ Skills
     left: 11%;
     top: 10%;
     text-align: center;
-    color: yellow;
+    color: white;
     text-shadow:1px 1px black;
     cursor:pointer;
 }
 .skillInfo{
     height: 61%;
     width: 81%;
+    font-size:100%;
     position: absolute;
     left: 11%;
     top: 10%;
     text-align: center;
-    color: yellow;
+    color: white;
     text-shadow:1px 1px black;
 }
 .signText{
