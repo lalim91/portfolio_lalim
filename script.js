@@ -229,14 +229,24 @@ var ContactGenerator = function () {
                     check.addClass('alert alert-danger').text('Error! Please try again.').css('text-align','center');
                 }
                 console.log('message sent!')
+            },
+            error:function(data){
+                console.log('the server is down');
             }
         });
     };
+
     this.submitClickHandler = function (){
         $('.submit').on('click', function(){
             c_self.submitAjax();
+            c_self.resetForm();
+
         })
+    };
+    this.resetForm = function (){
+        $('.formInfo').val('');
     }
+
 
 
 };
