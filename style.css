@@ -13,6 +13,9 @@ Navigation menu
 .navbar {
     background-color: darkseagreen;
 }
+.navbar-header .navbar-toggle .icon-bar{
+    background-color:white;
+}
 
 a:link {
     color:white;
@@ -94,7 +97,7 @@ Skills
     left: 11%;
     top: 6%;
     text-align: center;
-    color: yellow;
+    /*color: yellow;*/
     text-shadow:1px 1px black;
 }
 #signDiv{
@@ -431,8 +434,8 @@ Skills
 }
 
 .html{
-    top: 36vh;
-    left: 9vw;
+    top: 38vh;
+    left: 7vw;
 
 }
 .css{
@@ -459,7 +462,7 @@ Skills
 }
 .aj{
     top: 27vh;
-    left: 13vw;
+    left: 10vw;
 }
 .fb{
     left:19vw;
@@ -925,4 +928,112 @@ textarea {
     position: relative;
     left: 49%;
     padding-bottom: 6%;
+}
+
+@media only screen and (max-width : 375px){
+
+/********************************
+Home
+*********************************/
+    #home {
+       background-position: center;
+    }
+
+/********************************
+About Me
+*********************************/
+    #about {
+        background-position: center;
+    }
+    .aboutDiv{
+        height: 51%;
+        top: 43%;
+    }
+    #aboutName{
+        font-size:7vw;
+    }
+    #job{
+        font-size:3vw;
+    }
+    .aboutDiv #aboutDes{
+        font-size:92%;
+    }
+/********************************
+Skills
+*********************************/
+    #skill {
+        height:200vh;
+    }
+    .sign{
+        height: 43vh;
+        width:48vh;
+        top: 8vh;
+    }
+    #signContainer{
+        height: 61%;
+        width: 71%;
+        left: 16%;
+        top: 3%;
+    }
+    #signDiv{
+        height: 88%;
+        width: 66%;
+        left: 16%;
+    }
+    .skillInfo{
+        height: 61%;
+        width: 77%;
+        left: 10%;
+        top: 10%;
+    }
+    .tree{
+        height:70vh;
+        width:70vw;
+        top:2%;
+    }
+
+    .cherry{
+        height:70vh;
+        width:86vw;
+        top:8vh;
+
+    }
+    .css{
+        top: 7vh;
+        left: 17vw;
+    }
+    .boot{
+        top: 28vh;
+        left: 48vw;
+
+    }
+    .js{
+        top: 18vh;
+        left: 20vw;
+
+    }
+    .jq{
+        top: 39vh;
+        left: 37vw;
+    }
+    .angular{
+        top: 16vh;
+        left: 40vw;
+    }
+    .fb{
+        left: 37vw;
+        top: 3vh;
+    }
+    .git{
+        top: 28vh;
+        left: 48vw;
+    }
+    .gh{
+        top: 6vh;
+        left: 41vw;
+    }
+    .mp{
+        top: 39vh;
+        left: 40vw;
+    }
 }

@@ -27,20 +27,27 @@
 
 <!--================Fixed Nav Menu=================-->
 
-    <div class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
-            <ul class="nav navbar-nav pull-right">
-                <li class="navlist"><a href="#about">About Me</a></li>
-                <li class="navlist"><a href="#skill">Skills</a></li>
-                <li class="navlist"><a href="#project">Projects</a></li>
-                <li class="navlist"><a href="#connect">Connect</a></li>
-            </ul>
-        </div>
-    </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigate">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-    <!--<div class="navbar navbar-fixed-bottom">-->
-      <!--<div class="container-fluid"></div>-->
-    <!--</div>-->
+            </div>
+            <div class="collapse navbar-collapse" id="navigate">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navlist"><a href="#about">About Me</a></li>
+                    <li class="navlist"><a href="#skill">Skills</a></li>
+                    <li class="navlist"><a href="#project">Projects</a></li>
+                    <li class="navlist"><a href="#connect">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
 <!--=================End Nav Menu==================-->
 
@@ -52,9 +59,9 @@
 
 <!--==================About Me=====================-->
     <div id="about">
-        <div class="col-sm-offset-1 col-sm-4 aboutDiv">
-            <h3>Hello, I'm Leslie Ann</h3>
-            <p>Web Developer in Orange County</p>
+        <div class="col-xs-offset-1 col-xs-5 col-sm-4 aboutDiv">
+            <h3 id="aboutName">Hello, I'm Leslie Ann</h3>
+            <p id="job">Web Developer in Orange County</p>
             <hr>
             <p id="aboutDes">My passion in life is being a part of transformation; creating something out of nothing. Web Development has unlocked limitless possibilities, and I am excited to plunge in! </p>
         </div>
@@ -65,11 +72,11 @@
 <!--===================Skills======================-->
     <div id="skill" class="container">
 
-        <div class="col-sm-offset-1 col-sm-4 tree"></div>
-        <div class="col-sm-2 sign">
+        <div class="col-xs-offset-1 col-xs-4 tree"></div>
+        <div class="col-xs-2 sign">
            <div id = "signContainer"></div>
         </div>
-        <div class="col-sm-4 cherry"></div>
+        <div class="col-xs-4 cherry"></div>
 
     </div>
 <!--=================End Skills====================-->
@@ -167,7 +174,7 @@
 
 <!--===================Connect=====================-->
     <div id="connect" class="container">
-        <div class="contactInfo col-sm-5">
+        <div class="contactInfo col-xs-5">
             <p><span id="emailBeg">example</span>@<span id="emailEnd">yahoo.com</span></p>
             <p><span id="phoneArea">XXX</span>. <span id="phoneThree">XXX</span>. <span id="phoneFour">XXXX</span></p>
             <hr>
