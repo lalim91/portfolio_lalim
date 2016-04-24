@@ -929,19 +929,149 @@ textarea {
     left: 49%;
     padding-bottom: 6%;
 }
+@media only screen and (max-width : 1024px){
+    /********************************
+   Skills
+   *********************************/
+    .skillInfo{
+        font-size:91%;
+        top:20%;
+    }
+    .css{
+        left: 10vw;
+    }
+    .angular{
+        left: 6vw;
+    }
+    .gh{
+        top: 4vh;
+        left: 15vw;
+    }
+    .dt{
+        left: 6vw;
+    }
+    /********************************
+    Projects
+    *********************************/
+    .caption__overlay__title{
+        font-size:2.7vh;
+    }
+}
+@media only screen and (max-width : 768px) {
+    /********************************
+    About Me
+    *********************************/
+    .aboutDiv {
+        height:51%;
+    }
+    /********************************
+    Skills
+    *********************************/
+    #signDiv{
+        top:-4%;
+    }
+    .skillInfo{
+        font-size: 63%;
+        top: 12%;
+    }
+    /********************************
+    Projects
+    *********************************/
+    #project{
+        height:200vh;
+    }
+    .projectCol{
+        height: 45%;
+        top: 4%;
+    }
+    .projectCol2{
+        left: 8vw;
+    }
+    .caption__overlay__title{
+        font-size:5.5vh;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    .contactInfo{
+        left:8vw;
+        top:29vh;
+    }
+    #contactForm{
+        top:26vh;
+        left:9%;
+    }
+    #textDiv{
+        width:68vh;
+    }
+    .submit{
+        left:29vw;
+    }
+}
 
-@media only screen and (max-width : 375px){
+@media only screen and (max-width : 736px) {
+    /********************************
+    About Me
+    *********************************/
+    .aboutDiv {
+        height:51%;
+    }
+    /********************************
+    Skills
+    *********************************/
+    #signDiv{
+        top:-4%;
+    }
+    .skillInfo{
+        font-size: 63%;
+        top: 12%;
+    }
+    /********************************
+    Projects
+    *********************************/
+    #project{
+        height:200vh;
+    }
+    .projectCol{
+        height: 45%;
+        top: 4%;
+    }
+    .projectCol2{
+        left: 8vw;
+    }
+    .caption__overlay__title{
+        font-size:5.5vh;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    .contactInfo{
+        left:8vw;
+        top:29vh;
+    }
+    #contactForm{
+        top:26vh;
+        left:9%;
+    }
+    #textDiv{
+        width:68vh;
+    }
+    .submit{
+        left:29vw;
+    }
+}
 
-/********************************
-Home
-*********************************/
+@media only screen and (max-width : 414px){
+    /********************************
+   Home
+   *********************************/
     #home {
-       background-position: center;
+        background-position: center;
     }
 
-/********************************
-About Me
-*********************************/
+    /********************************
+    About Me
+    *********************************/
     #about {
         background-position: center;
     }
@@ -951,17 +1081,20 @@ About Me
         width: 68vw;
     }
     #aboutName{
-        font-size:7vw;
+        font-size:6vw;
     }
     #job{
-        font-size:3vw;
+        font-size:96%;
     }
     .aboutDiv #aboutDes{
-        font-size:92%;
+        height: 50%;
+        position: relative;
+        font-size: 96%;
+        bottom: 1%;
     }
-/********************************
-Skills
-*********************************/
+    /********************************
+    Skills
+    *********************************/
     #skill {
         height:200vh;
     }
@@ -969,6 +1102,7 @@ Skills
         height: 43vh;
         width:48vh;
         top: 8vh;
+        left:1vh;
     }
     #signContainer{
         height: 61%;
@@ -996,7 +1130,7 @@ Skills
         height:70vh;
         width:86vw;
         top:8vh;
-
+        left:4vw;
     }
     .css{
         top: 7vh;
@@ -1036,9 +1170,9 @@ Skills
         top: 39vh;
         left: 40vw;
     }
-/********************************
-Projects
-*********************************/
+    /********************************
+    Projects
+    *********************************/
     #project{
         height:278vh;
     }
@@ -1073,27 +1207,154 @@ Projects
         -o-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
-/********************************
-Contact Me
-*********************************/
+    /********************************
+    Contact Me
+    *********************************/
     #connect {
         height: 90vh;
     }
     .contactInfo {
-        left: 5vw;
-        top: 16vh;
-        width:45vh;
+        left: 7vw;
+        top: 11vh;
+        width:46vh;
     }
     #contactForm{
-        top:20vh;
+        top:16vh;
         height: 30vh;
-        left: 3vh;
+        left: 4vh;
     }
-    .inputNameDiv{
+    #textDiv{
         width:40vh;
     }
-    #inputEmailDiv{
+    .inputNameDiv, #inputEmailDiv{
+        width:40vh;
+    }
+    .submit{
+        left:50vw;
+    }
+}
+
+@media only screen and (max-width : 400px){
+
+    /********************************
+    About Me
+    *********************************/
+    #aboutName{
+        font-size:6vw;
+    }
+    .aboutDiv #aboutDes{
+        font-size: 100%;
+
+    }
+    /********************************
+    Skills
+    *********************************/
+    .sign{
+        left:6vh;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    #connect {
+        height: 90vh;
+    }
+    .contactInfo {
+        left: 10vw;
+    }
+    .inputNameDiv, #inputEmailDiv{
+        width:45vh;
+    }
+}
+
+@media only screen and (max-width : 375px){
+
+    /********************************
+    About Me
+    *********************************/
+    #job{
+        font-size:4vw;
+    }
+    .aboutDiv #aboutDes{
+        font-size:100%;
+    }
+    /********************************
+    Skills
+    *********************************/
+    .sign{
+        left:1vw;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    .contactInfo{
+        left:5vw;
+    }
+    .inputNameDiv, #inputEmailDiv{
         width:40vh;
     }
 
 }
+
+/*******************************************************************
+iPhone 5
+*******************************************************************/
+
+@media only screen and (max-width : 320px){ /*Portrait */
+    /********************************
+    About Me
+    *********************************/
+    #job{
+        font-size:80%;
+    }
+    .aboutDiv #aboutDes{
+        font-size:96%;
+    }
+    /********************************
+    Skills
+    *********************************/
+    .sign{
+        left:1vh;
+    }
+    #signDiv{
+        top:2%;
+    }
+    .skillInfo{
+       top:10%;
+       font-size:90%;
+    }
+    /********************************
+    Projects
+    *********************************/
+    .caption__overlay__title{
+        font-size:4.4vh;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    .contactInfo {
+        left: 6vw;
+        top:8vh;
+    }
+    #contactForm{
+        top:12vh;
+    }
+    .inputNameDiv, #inputEmailDiv{
+        width:38vh;
+    }
+}
+
+/*@media only screen and (max-width : 568px){  !*Landscape *!*/
+    /*!*********************************/
+    /*About Me*/
+    /**********************************!*/
+    /*#aboutName{*/
+        /*font-size:20px;*/
+    /*}*/
+    /*#job{*/
+        /*font-size:76%;*/
+    /*}*/
+    /*.aboutDiv #aboutDes{*/
+        /*font-size:96%;*/
+    /*}*/
+
+/*}*/
