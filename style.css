@@ -946,8 +946,9 @@ About Me
         background-position: center;
     }
     .aboutDiv{
-        height: 51%;
-        top: 43%;
+        height: 41%;
+        top: 54%;
+        width: 68vw;
     }
     #aboutName{
         font-size:7vw;
@@ -1083,9 +1084,16 @@ Contact Me
         top: 16vh;
         width:45vh;
     }
-
-    #inputName{
-
+    #contactForm{
+        top:20vh;
+        height: 30vh;
+        left: 3vh;
+    }
+    .inputNameDiv{
+        width:40vh;
+    }
+    #inputEmailDiv{
+        width:40vh;
     }
 
 }

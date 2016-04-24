@@ -183,17 +183,17 @@
 
             </div>
             <form role=form id="contactForm" class="col-sm-7" action="php_mailer/mail_withmailer.php" method="post">
-                <div class="form-group col-xs-5">
-                    <input id="inputName" name="name" type="text" class="form-control formInfo" pattern='^[A-Z][a-z]+ [A-Z][a-z]+' placeholder="First and Last Name" required>
+                <div class="form-group col-xs-5 inputNameDiv">
+                    <input id="inputName" name="name" type="text" class="form-control formInfo"  placeholder="First and Last Name" required>
                 </div>
-                <div class="form-group col-xs-5">
-                <input name="email" type="email" class="form-control formInfo" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' placeholder="Email" required>
+                <div class="form-group col-xs-5" id="inputEmailDiv">
+                    <input id="inputEmail" name="email" type="email" class="form-control formInfo" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' placeholder="Email" required>
                 </div>
-                <div class="form-group col-xs-10">
-                <textarea name="message" class="form-control formInfo" rows="5" placeholder="Message" required></textarea>
+                <div class="form-group col-xs-10" id="textDiv">
+                    <textarea id="inputText" name="message" class="form-control formInfo" rows="5" placeholder="Message" required></textarea>
                 <button class='submit btn btn-default' type="button">Submit</button> <div id="check"></div>
-            </div>
-        </form>
+                </div>
+            </form>
     </div>
 <!--================End Connect====================-->
 </body>
