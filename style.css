@@ -931,8 +931,8 @@ textarea {
 }
 @media only screen and (max-width : 1024px){
     /********************************
-   Skills
-   *********************************/
+    Skills
+    *********************************/
     .skillInfo{
         font-size:91%;
         top:20%;
@@ -958,48 +958,288 @@ textarea {
     }
 }
 @media only screen and (max-width : 768px) {
-    /********************************
-    About Me
-    *********************************/
+    /*/*********************************/
+    /*Home*/
+    /**********************************/
+    #home {
+        background-position: center;
+    }
+
+    /*/*********************************/
+    /*About Me*/
+    /**********************************/
+    #about {
+        background-position: center;
+    }
+    #aboutName{
+        font-size:4vh;
+    }
     .aboutDiv {
         height:51%;
     }
-    /********************************
-    Skills
-    *********************************/
+    .aboutDiv #aboutDes{
+        font-size:2vh;
+    }
+    /*/*********************************/
+    /*Skills*/
+    /**********************************/
+    #skill{
+        height:68vh;
+    }
+    .tree{
+        top:1vh;
+    }
+    .cherry{
+        top:1vh;
+    }
+    #signDiv h3{
+        font-size:100%;
+    }
+    #signDiv p{
+        font-size:78%;
+    }
+
+    .sign{
+        top:24vh;
+    }
     #signDiv{
-        top:-4%;
+        top:39%;
     }
-    .skillInfo{
-        font-size: 63%;
-        top: 12%;
+    .skillInfo {
+        font-size: 68%;
+        top: 45%;
     }
-    /********************************
-    Projects
-    *********************************/
+    .skills, .devSkills{
+        width: 6vh;
+        height: 6vh;
+        line-height: 6vh;
+        font-size: 1vh;
+    }
+    .html{
+        top: 38vh;
+        left: 7vw;
+
+    }
+    .css {
+        top: 33vh;
+        left: 13vw;
+    }
+    .boot {
+        top: 30vh;
+        left: 23vw;
+    }
+    .js{
+        top: 15vh;
+        left: 20vw;
+
+    }
+    .jq{
+        top: 39vh;
+        left: 23vw;
+    }
+    .angular{
+        top: 16vh;
+        left: 11vw;
+    }
+    .aj{
+        top: 27vh;
+        left: 10vw;
+    }
+    .fb {
+        left: 19vw;
+        top: 22vh;
+    }
+    .git{
+        top: 28vh;
+        left: 10vw;
+    }
+    .gh {
+        top: 31vh;
+        left: 22vw;
+    }
+    .php{
+        top: 20vh;
+        left: 19vw;
+    }
+    .mp {
+        top: 38vh;
+        left: 18vw;
+    }
+    .sub {
+        top: 37vh;
+        left: 4vw;
+    }
+    .dt {
+        top: 22vh;
+        left: 4vw;
+    }
+    @-webkit-keyframes fall {
+        to {
+            top: 75%;
+        }
+    }
+    @-moz-keyframes fall {
+        to {
+            top: 75%;
+        }
+    }
+    @-o-keyframes fall {
+        to {
+            top: 75%;
+        }
+    }
+
+    @keyframes fall {
+        to {
+            top: 75%;
+        }
+    }
+    @-webkit-keyframes drop {
+        36% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 60%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 65%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 75%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    @-moz-keyframes drop {
+        36% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 60%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 65%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 75%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    @-o-keyframes drop {
+        36% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 60%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 65%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 75%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes drop {
+        36% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 60%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 75%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 65%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 75%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    /*/*********************************/
+    /*Projects*/
+    /***********************************/
     #project{
-        height:200vh;
+        height:69vh;
     }
     .projectCol{
-        height: 45%;
-        top: 4%;
+        height: 89%;
+        top: 3%;
+        left: -2%;
+        width: 45%;
     }
     .projectCol2{
-        left: 8vw;
+        left: -3vw;
     }
     .caption__overlay__title{
-        font-size:5.5vh;
+        font-size:1.6vh;
     }
-    /********************************
-    Contact Me
-    *********************************/
+
+    /*/*********************************/
+    /*Contact Me*/
+    /**********************************/
+    #connect{
+        height:45vh;
+    }
     .contactInfo{
         left:8vw;
-        top:29vh;
+        top:14vh;
+        font-size: 3vw;
     }
     #contactForm{
-        top:26vh;
-        left:9%;
+        top:15vh;
+        left:2%;
+    }
+    .inputNameDiv, #inputEmailDiv{
+        width: 36vh;
+        margin-bottom: 1%;
     }
     #textDiv{
         width:68vh;
@@ -1007,51 +1247,313 @@ textarea {
     .submit{
         left:29vw;
     }
+    #textDiv{
+        width:36vh;
+    }
+    .submit{
+        left:29vw;
+    }
+
 }
 
 @media only screen and (max-width : 736px) {
-    /********************************
-    About Me
-    *********************************/
-    .aboutDiv {
-        height:51%;
+    /*/*********************************/
+    /*Home*/
+    /**********************************/
+    #home {
+        background-position: 0% 0%;
+    }
+
+    /*/*********************************/
+    /*About Me*/
+    /**********************************/
+    #about {
+        background-position: 0% 0%;
+    }
+    .aboutDiv #aboutDes{
+        font-size: 3vh;
     }
     /********************************
     Skills
     *********************************/
+    #skill{
+        height:100vh;
+    }
+    .skills {
+        width: 10vh;
+        height: 10vh;
+        line-height: 10vh;
+        background-color: tomato;
+        cursor: pointer;
+        color: white;
+        border-radius: 100%;
+        text-align: center;
+        position: absolute;
+        display: inline-block;
+        font-size: 2vh;
+    }
+    .devSkills {
+        width: 10vh;
+        height: 10vh;
+        line-height: 10vh;
+        background-color: #FFE9EC;
+        cursor: pointer;
+        color: #D45D7B;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        border: 1px solid #D45D7B;
+        text-align: center;
+        position: absolute;
+        display: inline-block;
+        font-size: 2vh;
+    }
+    .tree{
+        top:16vh;
+    }
+    .cherry{
+        top:16vh;
+    }
+    .sign{
+        top:50vh;
+    }
     #signDiv{
         top:-4%;
     }
+    #signDiv h3{
+        font-size:100%;
+    }
+    #signDiv p{
+        font-size:75%;
+    }
+
     .skillInfo{
         font-size: 63%;
         top: 12%;
+    }
+    .html{
+        top: 38vh;
+        left: 7vw;
+
+    }
+    .css{
+        top: 6vh;
+        left: 13vw;
+    }
+    .boot{
+        top: 26vh;
+        left: 19vw;
+
+    }
+    .js{
+        top: 15vh;
+        left: 20vw;
+
+    }
+    .jq{
+        top: 39vh;
+        left: 23vw;
+    }
+    .angular{
+        top: 16vh;
+        left: 11vw;
+    }
+    .aj{
+        top: 27vh;
+        left: 10vw;
+    }
+    .fb{
+        left:19vw;
+        top:2vh;
+    }
+    .git{
+        top: 28vh;
+        left: 10vw;
+    }
+    .gh{
+        top: 1vh;
+        left: 18vw;
+    }
+    .php{
+        top: 20vh;
+        left: 19vw;
+    }
+    .mp{
+        top: 39vh;
+        left: 18vw;
+    }
+    .sub{
+        top: 41vh;
+        left: 7vw;
+    }
+    .dt{
+        top: 10vh;
+        left: 11vw;
+    }
+    @-webkit-keyframes fall {
+        to {
+            top: 95%;
+        }
+    }
+    @-moz-keyframes fall {
+        to {
+            top: 95%;
+        }
+    }
+    @-o-keyframes fall {
+        to {
+            top: 95%;
+        }
+    }
+
+    @keyframes fall {
+        to {
+            top: 95%;
+        }
+    }
+    @-webkit-keyframes drop {
+        36% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 70%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 85%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 90%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    @-moz-keyframes drop {
+        36% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 70%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 85%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 90%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    @-o-keyframes drop {
+        36% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 70%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 85%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 90%;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes drop {
+        36% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-out;
+        }
+
+        54% {
+            top: 70%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-in;
+        }
+        72% {
+            top: 90%;
+            transform: scale(1.15, .8);
+            animation-timing-function: ease-in-out;
+        }
+        90% {
+            top: 85%;
+            transform: scale(1, 1);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            top: 90%;
+            animation-timing-function: ease-in-out;
+        }
     }
     /********************************
     Projects
     *********************************/
     #project{
-        height:200vh;
+        height:100vh;
     }
     .projectCol{
-        height: 45%;
+        height: 91%;
         top: 4%;
     }
     .projectCol2{
-        left: 8vw;
+        left: -2vw;
     }
     .caption__overlay__title{
-        font-size:5.5vh;
+        font-size:4vh;
     }
     /********************************
     Contact Me
     *********************************/
+    #connect{
+        height:100vh;
+    }
     .contactInfo{
         left:8vw;
         top:29vh;
+        font-size: 3vw;
     }
     #contactForm{
         top:26vh;
         left:9%;
+    }
+    .inputNameDiv, #inputEmailDiv{
+        width: 68vh;
+        margin-bottom: 1%;
     }
     #textDiv{
         width:68vh;
@@ -1060,11 +1562,105 @@ textarea {
         left:29vw;
     }
 }
-
-@media only screen and (max-width : 414px){
+@media only screen and (max-width: 667px){
     /********************************
-   Home
+    About Me
+    *********************************/
+    .aboutDiv #aboutDes {
+        font-size: 79%;
+    }
+    /********************************
+    Skills
+    *********************************/
+    #signDiv p {
+        font-size: 66%;
+    }
+    .skillInfo{
+        font-size:58%;
+    }
+    .tree{
+        top:13vh;
+    }
+    .cherry{
+        top:13vh;
+    }
+    /********************************
+   Contact Me
    *********************************/
+    #connect{
+        height:100vh;
+    }
+    .contactInfo {
+        left: 6vw;
+        top: 25vh;
+        font-size: 3vw;
+    }
+}
+
+
+@media only screen and (max-width : 568px){  /*iPhone 5 Landscape */
+    /********************************
+    About Me
+    *********************************/
+    .aboutDiv{
+        height:65%;
+    }
+    #aboutName{
+        font-size:20px;
+    }
+    #job{
+        font-size:76%;
+    }
+    .aboutDiv #aboutDes{
+        font-size:81%;
+    }
+    /********************************
+    Skill
+    *********************************/
+    #signDiv h3{
+        font-size:73%;
+    }
+    #signDiv p{
+        font-size:57%;
+    }
+    .skillInfo{
+        font-size:48%;
+    }
+    .tree{
+        top:13vh;
+    }
+    .cherry{
+        top:13vh;
+    }
+    .git {
+        top: 28vh;
+        left: 6vw;
+    }
+    /********************************
+    Contact Me
+    *********************************/
+    #connect{
+        height: 100vh;
+    }
+    .contactInfo {
+        left: 6vw;
+        top: 25vh;
+        font-size: 3vw;
+    }
+    #contactForm{
+        top:21vh;
+    }
+    .inputNameDiv, #inputEmailDiv{
+        width:68vh;
+        margin-bottom:1%;
+    }
+
+}
+
+@media only screen and (max-width: 415px){
+    /********************************
+    Home
+    *********************************/
     #home {
         background-position: center;
     }
@@ -1114,12 +1710,20 @@ textarea {
         height: 88%;
         width: 66%;
         left: 16%;
+        top: 11%;
+    }
+    #signDiv h3{
+        font-size:100%;
+    }
+    #signDiv p{
+        font-size:92%;
     }
     .skillInfo{
         height: 61%;
         width: 77%;
         left: 10%;
         top: 21%;
+        font-size:96%;
     }
     .tree{
         height:70vh;
@@ -1178,7 +1782,8 @@ textarea {
     }
     .projectCol{
         height: 48%;
-        top:2%;
+        width: 89%;
+        top: 2%;
     }
     .box{
         height: 25%;
@@ -1283,11 +1888,27 @@ textarea {
     .sign{
         left:1vw;
     }
+    #signDiv{
+        top: 4%;
+    }
+
+    #signDiv h3{
+        font-size:24px;
+    }
+    #signDiv p{
+        font-size:14px;
+    }
+    .skillInfo{
+        top:10%;
+        font-size:90%;
+    }
     /********************************
     Contact Me
     *********************************/
-    .contactInfo{
-        left:5vw;
+    .contactInfo {
+        left: 6vw;
+        top:8vh;
+        font-size:3vh;
     }
     .inputNameDiv, #inputEmailDiv{
         width:40vh;
@@ -1295,14 +1916,16 @@ textarea {
 
 }
 
-/*******************************************************************
-iPhone 5
-*******************************************************************/
-
 @media only screen and (max-width : 320px){ /*Portrait */
     /********************************
     About Me
     *********************************/
+    .aboutDiv{
+        height:41%;
+    }
+    #aboutName{
+        font-size:19px;
+    }
     #job{
         font-size:80%;
     }
@@ -1318,6 +1941,12 @@ iPhone 5
     #signDiv{
         top:2%;
     }
+    #signDiv h3{
+        font-size:24px;
+    }
+    #signDiv p{
+        font-size:14px;
+    }
     .skillInfo{
        top:10%;
        font-size:90%;
@@ -1326,35 +1955,23 @@ iPhone 5
     Projects
     *********************************/
     .caption__overlay__title{
-        font-size:4.4vh;
+        font-size:3.4vh;
     }
     /********************************
     Contact Me
     *********************************/
     .contactInfo {
-        left: 6vw;
+        left: 5vw;
         top:8vh;
+        font-size:3vh;
     }
-    #contactForm{
-        top:12vh;
+    #contactForm {
+        top: 12vh;
+        left: 5vw;
     }
     .inputNameDiv, #inputEmailDiv{
-        width:38vh;
+        width:40vh;
+        margin-bottom:15px;
     }
 }
 
-/*@media only screen and (max-width : 568px){  !*Landscape *!*/
-    /*!*********************************/
-    /*About Me*/
-    /**********************************!*/
-    /*#aboutName{*/
-        /*font-size:20px;*/
-    /*}*/
-    /*#job{*/
-        /*font-size:76%;*/
-    /*}*/
-    /*.aboutDiv #aboutDes{*/
-        /*font-size:96%;*/
-    /*}*/
-
-/*}*/
