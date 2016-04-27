@@ -26,7 +26,7 @@ var skillManager = function (tree,cherry) {//this is the skill manager
         for (var i in dev) {
             var element = dev[i].renderSelf().addClass('devs');
             this.cherryElement.append(element);
-            $('.sign').on('click',function () {
+            $('.sign, .cherry').on('click',function () {
                 console.log('I was clicked');
                 $('.devs').show().addClass('devSkills');
             })
@@ -37,7 +37,7 @@ var skillManager = function (tree,cherry) {//this is the skill manager
         for (var i in skills) {
             var element = skills[i].renderSelf().addClass('lang');
             this.treeElement.append(element);
-            $('.sign').on('click',function () {
+            $('.sign, .tree').on('click',function () {
                 console.log('I was clicked');
                 $('.lang').show().addClass('skills');
             })
@@ -121,31 +121,32 @@ var welH1 = $('<h3>',{
     text:"Welcome to the Skill Garden"
 });
 var welp = $('<p>',{
-    text:"Click to see what I've grown!"
+    text:"Click to see what I've grown!",
+    class:'clickp'
 });
 
 var html_des = $('<div>',{
-    text:"Html5 was the first language I learn, in conjunction with CSS. It's given me an appreciation for UI and UX",
+    text:"HTML5, while the first language I learned. It is so simple to code structure with it, but effective UX/UI can make it more complex.",
     class:'skillInfo'
 });
 var css_des = $('<div>',{
-    text:"I enjoy seeing how far I can take animation with CSS",
+    text:"CSS lets my creativity loose, and css animations in particular are a joy of mine. I love to see how far I can push my CSS understanding.",
     class:'skillInfo'
 });
 var boot_des = $('<div>',{
-    text:"Bootstrap has made working on projects more time efficient",
+    text:"Bootstrap is both an industry standard across much of the internet and allows me to quickly fashion my concepts into clean, responsive designs.",
     class:'skillInfo'
 });
 var js_des = $('<div>',{
-    text:"Learning JavaScript has given me the power to create functionality. It is so exciting when it works!",
+    text:"Learning Javascript has given me the power to create deep interactivity. It is so exciting when it works after a long struggle!",
     class:'skillInfo'
 });
 var jq_des = $('<div>',{
-    text:"My favorite part about jquery is DOM creation. ",
+    text:"jQuery takes javascript to the next level, and DOM creation in particular is one of my favorite aspects of it. ",
     class:'skillInfo'
 });
 var angular_des = $('<div>',{
-    text:"After learning angular, I am excited to learn other frameworks.",
+    text:"Angular was my first framework, but by no means my last!  I'm really excited to look into new code-bases that can optimize my efficiency.",
     class:'skillInfo'
 });
 var ajax_des = $('<div>',{
@@ -153,7 +154,7 @@ var ajax_des = $('<div>',{
     class:'skillInfo'
 });
 var fb_des = $('<div>',{
-    text:"Learning Firebase has given me a taste of what it is like working with a database.",
+    text:"Firebase gives me professional-level database interactivity with a minimal amount of effort, as well as a form of data-connectivity between peers.",
     class:'skillInfo'
 });
 var git_des = $('<div>',{
@@ -165,7 +166,7 @@ var gh_des = $('<div>',{
     class:'skillInfo'
 });
 var sub_des = $('<div>',{
-    text:"Sublime is the first text editor I used.",
+    text:"Sublime was the first IDE I used, and is still valuable for its light weight, low to no cost, and extensive community support.",
     class:'skillInfo'
 });
 var chrome_des = $('<div>',{
@@ -173,11 +174,11 @@ var chrome_des = $('<div>',{
     class:'skillInfo'
 });
 var mp_des = $('<div>',{
-    text:"I love quickly accessing my projects with MAMP ",
+    text:"MAMP allows me to run my files locally without need for an external server.",
     class:'skillInfo'
 });
 var php_des = $('<div>',{
-    text:"PhpStorm is my preferred text editor, due to its organization and usability. ",
+    text:"PhpStorm is my preferred IDE, due to its organization and usability features. ",
     class:'skillInfo'
 });
 
@@ -277,7 +278,7 @@ $(document).ready(function () {
     sm.welcomeSign();
 
     contact.getAddress('leslieannlim', 'gmail.com');
-    contact.getPhone('714', '321', '0309');
+    contact.getPhone('714', '475', '2340');
     contact.submitClickHandler();
 
     project = new projectBox();

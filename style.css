@@ -16,7 +16,14 @@ Navigation menu
 .navbar-header .navbar-toggle .icon-bar{
     background-color:white;
 }
-
+#logo{
+    width: 21%;
+    top: 11%;
+    position: absolute;
+}
+.nav>li{
+    font-size:2vh;
+}
 a:link {
     color:white;
 }
@@ -128,7 +135,10 @@ Skills
     width:90%;
     margin: auto;
 }
-
+.clickp{
+    font-size: 2vh;
+    color: darkturquoise;
+}
 .skills {
     width: 10vh;
     height: 10vh;
@@ -766,6 +776,8 @@ Projects
     -ms-transform: scale(0,0);
     -o-transform: scale(0,0);
     transform: scale(0,0);
+
+
 }
 /*.box_expand{*/
     /*transform:scale(2,2);*/
@@ -787,6 +799,9 @@ Projects
     -ms-transform: translateZ(0) scale(2,2);
     -o-transform: translateZ(0) scale(2,2);
     transform: translateZ(0) scale(2,2);
+
+
+
 }
 .box{
     height: 50%;
@@ -802,11 +817,12 @@ Projects
     bottom: 0;
     left: 0;
     background: transparent;
-    -webkit-transition: background .35s ease-out;
-    -moz-transition: background .35s ease-out;
-    -ms-transition: background .35s ease-out;
-    -o-transition: background .35s ease-out;
-    transition: background .35s ease-out;
+    -webkit-transition: background .1s ease-out;
+    -moz-transition: background .1s ease-out;
+    -ms-transition: background .1s ease-out;
+    -o-transition: background .1s ease-out;
+    transition: background .1s ease-out;
+
 }
 .caption:hover::before {
     background: rgba(0, 0, 0, .5);
@@ -826,11 +842,11 @@ Projects
     -ms-transform: translateY(100%);
     -o-transform: translateY(100%);
     transform: translateY(100%);
-    -webkit-transition: transform .35s ease-out;
-    -moz-transition: transform .35s ease-out;
-    -ms-transition: transform .35s ease-out;
-    -o-transition: transform .35s ease-out;
-    transition:transform .35s ease-out;
+    -webkit-transition: transform .1s ease-out;
+    -moz-transition: transform .1s ease-out;
+    -ms-transition: transform .1s ease-out;
+    -o-transition: transform .1s ease-out;
+    transition:transform .1s ease-out;
 }
 
 .caption:hover .caption__overlay {
@@ -839,7 +855,6 @@ Projects
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
-    z-index:2;
 }
 
 .caption__overlay__title {
@@ -848,16 +863,18 @@ Projects
     -ms-transform: translateY(-216%);
     -o-transform: translateY(-216%);
     transform: translateY(-216%);
-    background-color: darkseagreen;
     opacity: .8;
     font-size:3.5vh;
     width:inherit;
+    background: linear-gradient(to right, rgba(143, 188, 143,1) 45% , rgba(143, 188, 143,.1) 75%);
 
-    -webkit-transition: -webkit-transform .35s ease-out;
-    -moz-transition: -moz-transform .35s ease-out;
-    -ms-transition: -ms-transform .35s ease-out;
-    -o-transition: -o-transform .35s ease-out;
-    transition: transform .35s ease-out;
+    text-shadow: darkseagreen 2px 2px 3px;
+
+    -webkit-transition: -webkit-transform .1s ease-out;
+    -moz-transition: -moz-transform .1s ease-out;
+    -ms-transition: -ms-transform .1s ease-out;
+    -o-transition: -o-transform .1s ease-out;
+    transition: transform .1s ease-out;
 
 }
 
@@ -873,6 +890,7 @@ Projects
     text-align: center;
     color:transparent;
     display:none;
+    padding:3%;
 }
 .caption:hover .caption__overlay__content{
     color:white;
@@ -880,14 +898,19 @@ Projects
 }
 .projectLinks{
     font-size: 65%;
+    color:darkseagreen;
 }
 .projectLinks a {
     margin: 5%;
     border: 1px solid white;
     padding: 2%;
     border-radius: 10px;
+    font-size: 2vh;
+    color: darkseagreen;
 }
-
+.live{
+    display:none;
+}
 /********************************
 Contact Me
 *********************************/
@@ -931,6 +954,12 @@ textarea {
 }
 @media only screen and (max-width : 1024px){
     /********************************
+     Navigation menu
+     *********************************/
+    #logo{
+        width:31%;
+    }
+    /********************************
     Skills
     *********************************/
     .skillInfo{
@@ -958,6 +987,16 @@ textarea {
     }
 }
 @media only screen and (max-width : 768px) {
+    /********************************
+     Navigation menu
+     *********************************/
+    #logo{
+        width: 36%;
+        top: 1vh;
+    }
+    .nav>li{
+        font-size:100%;
+    }
     /*/*********************************/
     /*Home*/
     /**********************************/
@@ -1257,6 +1296,13 @@ textarea {
 }
 
 @media only screen and (max-width : 736px) {
+    /********************************
+     Navigation menu
+     *********************************/
+    #logo{
+        width: 42%;
+        top: 2vh;
+    }
     /*/*********************************/
     /*Home*/
     /**********************************/
@@ -1600,6 +1646,13 @@ textarea {
 
 @media only screen and (max-width : 568px){  /*iPhone 5 Landscape */
     /********************************
+    Navigation menu
+    *********************************/
+    #logo{
+        width: 42%;
+        top: 3vh;
+    }
+    /********************************
     About Me
     *********************************/
     .aboutDiv{
@@ -1658,6 +1711,13 @@ textarea {
 }
 
 @media only screen and (max-width: 415px){
+    /********************************
+     Navigation menu
+    *********************************/
+    #logo{
+        width: 70%;
+        top: 1vh;
+    }
     /********************************
     Home
     *********************************/
@@ -1872,7 +1932,13 @@ textarea {
 }
 
 @media only screen and (max-width : 375px){
-
+    /********************************
+    Navigation menu
+   *********************************/
+    #logo{
+        width: 62%;
+        top: 2vh;
+    }
     /********************************
     About Me
     *********************************/
@@ -1917,6 +1983,13 @@ textarea {
 }
 
 @media only screen and (max-width : 320px){ /*Portrait */
+    /********************************
+     Navigation menu
+    *********************************/
+    #logo{
+        width: 64%;
+        top: 2vh;
+    }
     /********************************
     About Me
     *********************************/
