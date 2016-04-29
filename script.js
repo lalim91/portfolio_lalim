@@ -117,7 +117,7 @@ var skillManager = function (tree,cherry) {//this is the skill manager
 var welcome = $('<div>',{
     id:'signDiv'
 });
-var welH1 = $('<h3>',{
+var welH1 = $('<p>',{
     text:"Welcome to the Skill Garden"
 });
 var welp = $('<p>',{
