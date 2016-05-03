@@ -1,10 +1,13 @@
 /**
  * Created by Lalim on 2/12/16.
  */
+
+
 var skillManager = function (tree,cherry) {//this is the skill manager
     var self = this;
     this.treeElement = $(tree);
     this.cherryElement = $(cherry);
+    this.treesTriggered = false;
     var skills = [];
     var dev = [];
     var skill_text = "";
@@ -46,6 +49,16 @@ var skillManager = function (tree,cherry) {//this is the skill manager
 
     this.log_skills = function () {
         console.log(skills);
+    };
+    this.scrollGrow = function(){
+        $(window).scroll(function(e){
+            //console.log('scroll is currently',$(window).scrollTop());
+            if(!self.treesTriggered && ($("#skill").position().top - (.25*$('#skill').height())) <= $(window).scrollTop()){
+                self.treesTriggered=true;
+                $('.devs').show().addClass('devSkills');
+                $('.lang').show().addClass('skills');
+            }
+        });
     };
 
     this.welcomeSign = function (){
@@ -252,6 +265,17 @@ var ContactGenerator = function () {
 
 };
 
+function process_links(){
+    if(devmode==undefined || !devMode) {
+        var preLink = 'http://';
+    } else{
+        var preLink = 'http://test.';
+    }
+    $("a.dyn_link").each(function(){
+        $(this).attr('href',preLink+$(this).attr('href'));
+    });
+}
+
 
 var contact = new ContactGenerator();
 var sm;
@@ -276,6 +300,7 @@ $(document).ready(function () {
     sm.render_skills();
     sm.render_dev();
     sm.welcomeSign();
+    sm.scrollGrow();
 
     contact.getAddress('leslieannlim', 'gmail.com');
     contact.getPhone('714', '475', '2340');
@@ -283,5 +308,5 @@ $(document).ready(function () {
 
     project = new projectBox();
     project.hoverDiv();
-
+    process_links();
 });

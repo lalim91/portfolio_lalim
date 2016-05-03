@@ -238,7 +238,7 @@ Skills
         left: 55%;
     }
     .php{
-        top: 25%;
+        top: 30%;
         left: 35%;
     }
     .mp{
@@ -686,9 +686,9 @@ Skills
     }
 
     .skills, .devSkills {
-        width: 8vw;
-        height: 8vw;
-        line-height:8vw;
+        width: 6vw;
+        height: 6vw;
+        line-height:6vw;
         font-size: 1vw;
     }
     .js {
@@ -724,9 +724,9 @@ Skills
 }
 @media only screen and (min-width : 1000px) {
     .skills, .devSkills{
-        max-width: 96px;
-        max-height: 96px;
-        line-height: 96px;
+        max-width: 85px;
+        max-height: 85px;
+        line-height: 66px;
         font-size:96%;
     }
 }
