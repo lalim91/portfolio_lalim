@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img id="logo" src="image/logoName.png"></a>
+                <a class="col-xs-9 navbar-brand" href="#"><img id="logo" src="image/logoName.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="navigate">
                 <ul class="nav navbar-nav navbar-right">
@@ -60,7 +60,7 @@
 
     <div id="about">
 
-        <div class="aboutDiv">
+        <div class="col-sm-offset-1 col-sm-4 aboutDiv">
             <h3 id="aboutName">Hello, I'm Leslie Ann</h3>
             <p id="job">Web Developer in Orange County</p>
             <hr>
@@ -77,11 +77,15 @@
     <div id="skill">
 
         <div class="container garden">
-            <div class="col-sm-4 tree"></div>
-            <div class="col-sm-4 sign">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-4 tree">
+                <img class="forest" src="image/treeFront2.png">
+            </div>
+            <div class="col-xs-12 col-sm-3 sign">
                 <div id="signContainer"></div>
             </div>
-            <div class="col-sm-4 cherry"></div>
+            <div class="col-xs-12 col-sm-4 cherry">
+                <img class="forest" src="image/pinktreeDev.png">
+            </div>
         </div>
 
     </div>
@@ -91,7 +95,7 @@
 <!--==================Projects=====================-->
     <div id="project">
         <div class="container containPro">
-            <div class="projectCol">
+            <div class="projectCol projectCol2">
 
                 <div class="mboutique one box">
                     <div class="caption__overlay">
@@ -137,7 +141,7 @@
                 </div>
 
             </div>
-            <div class="projectCol projectCol2">
+            <div class="projectCol">
 
                 <div class="sgt one box">
                     <div class="caption__overlay">
@@ -192,7 +196,7 @@
 <!--===================Connect=====================-->
     <div id="connect">
         <div  class="container contactContain">
-            <div class="contactInfo">
+            <div class="contactInfo col-xs-5">
                 <p id="emaillink"><a href="mailto:leslieannlim@gmail.com"><span id="emailBeg">example</span>@<span id="emailEnd">yahoo.com</span></a></p>
                 <p><span id="phoneArea">XXX</span>. <span id="phoneThree">XXX</span>. <span id="phoneFour">XXXX</span></p>
                 <hr>
@@ -200,7 +204,7 @@
 
 
             </div>
-            <form role=form id="contactForm" class="col-sm-6" action="php_mailer/mail_withmailer.php" method="post">
+            <form role=form id="contactForm" class="col-xs-5" action="php_mailer/mail_withmailer.php" method="post">
                 <div class="form-group col-xs-12 inputNameDiv">
                     <input id="inputName" name="name" type="text" class="form-control formInfo"  placeholder="First and Last Name" required>
                 </div>

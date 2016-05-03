@@ -1,6 +1,26 @@
 <?php
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
+
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_REGEXP, ['options'=>['regexp'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$']]);
+if ($email === null || $email === false){
+    http_response_code(404);
+    exit();
+}
+
+$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+if (empty($name)){
+    http_response_code(404);
+    exit();
+}
+
+$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+if (empty($message)){
+    http_response_code(404);
+    exit();
+}
+
+
 $mail = new PHPMailer;
 $mail->SMTPDebug = 0;                               // Enable verbose debug output
 
@@ -22,10 +42,10 @@ $options = array(
 );
 $mail->smtpConnect($options);
 $mail->From = $_POST['email'];
-$mail->FromName = $_POST['name'];
+$mail->FromName = $name;
 $mail->addAddress('leslieannlim@gmail.com', 'Leslie Lim');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo($_POST['email'], $_POST['name']);
+$mail->addReplyTo($_POST['email'], $name);
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
@@ -34,8 +54,8 @@ $mail->addReplyTo($_POST['email'], $_POST['name']);
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'message from '.$_SERVER['REMOTE_ADDR'];
-$mail->Body    = $_POST['message'];
-$mail->AltBody = htmlentities($_POST['message']);
+$mail->Body    = $message;
+$mail->AltBody = htmlentities($message);
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
