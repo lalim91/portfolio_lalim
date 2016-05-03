@@ -266,7 +266,7 @@ var ContactGenerator = function () {
 };
 
 function process_links(){
-    if(devmode==undefined || !devMode) {
+    if(typeof devMode=='undefined' || !devMode) {
         var preLink = 'http://';
     } else{
         var preLink = 'http://test.';

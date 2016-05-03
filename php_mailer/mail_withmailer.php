@@ -1,28 +1,30 @@
 <?php
+echo 'test before send';
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 
+
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_REGEXP, ['options'=>['regexp'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$']]);
 if ($email === null || $email === false){
-    http_response_code(404);
+    http_response_code(403);
     exit();
 }
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 if (empty($name)){
-    http_response_code(404);
+    http_response_code(403);
     exit();
 }
 
 $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 if (empty($message)){
-    http_response_code(404);
+    http_response_code(403);
     exit();
 }
 
 
 $mail = new PHPMailer;
-$mail->SMTPDebug = 0;                               // Enable verbose debug output
+//$mail->SMTPDebug = 0;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -56,12 +58,14 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'message from '.$_SERVER['REMOTE_ADDR'];
 $mail->Body    = $message;
 $mail->AltBody = htmlentities($message);
+$output = [];
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $output['success']=false;
+    $output['message']=$mail->ErrorInfo;
 } else {
     //header('location: ../index.html');
-    echo 'Message has been sent';
+    $output['success']=true;
 }
+echo json_encode($output);
 ?>
