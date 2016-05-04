@@ -1,12 +1,17 @@
 <?php
-echo 'test before send';
+//echo 'test before send';
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 
 
-$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_REGEXP, ['options'=>['regexp'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$']]);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_REGEXP, ['options'=>['regexp'=>"/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/"]]);
 if ($email === null || $email === false){
-    http_response_code(403);
+    $output = [];
+
+    $output['success']=false;
+    $output['message']='invalid email';
+
+    echo json_encode($output);
     exit();
 }
 
