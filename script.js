@@ -234,15 +234,17 @@ var ContactGenerator = function () {
             type:mailform.attr('method'),
             url:mailform.attr('action'),
             data:mailform.serialize(),
+            dataType:'json',
             cached:false,
             success:function(data){
                 var check = $('#check');
-                if(data=='Message has been sent'){
+                if(data.success){
                     check.addClass('alert alert-success').text('Message sent!').css('text-align','center');
+                    console.log('message sent!')
                 }else {
                     check.addClass('alert alert-danger').text('Error! Please try again.').css('text-align','center');
                 }
-                console.log('message sent!')
+
             },
             error:function(data){
                 console.log('the server is down');

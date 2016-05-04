@@ -1186,7 +1186,7 @@ Contact Me
     }
     #check{
         display: inline-block;
-        height: 4vh;
+        /*height: 4vh;*/
         width: 11vw;
         position: relative;
         left: 49%;
